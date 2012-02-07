@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'barebones-phonegap' target in the 'barebones-phonegap' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
