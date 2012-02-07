@@ -2,21 +2,33 @@
 <html>
   <head>
     <!-- BUG WITH BETA 1: you must remove this line to run in a normal browser. -->
-	<script type="text/javascript" charset="utf-8" src="phonegap-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.2.0.js"></script>
 
     <!-- Sencha Touch -->
-	<script type="text/javascript" charset="utf-8" src="touch2/builds/sencha-touch-all-debug.js"></script>
-	<link rel="stylesheet" href="touch2/resources/css/sencha-touch.css">
+    <script type="text/javascript" charset="utf-8" src="touch2/builds/sencha-touch-all-debug.js"></script>
+    <link rel="stylesheet" href="touch2/resources/css/sencha-touch.css">
 
     <!-- Simple Application -->
-	<script type="text/javascript">
-		Ext.application({
-			name: 'MyApp',
-			launch: function() {
-				alert('launch');
-			}
-		});
-	</script>
+    <script type="text/javascript">
+        Ext.application({
+            name: 'MyApp',
+            launch: function() {
+                // This will appear in the Xcode console. Used for debugging.
+                console.log('launch');
+
+                Ext.Viewport.add([
+                    {
+                        xtype: 'toolbar',
+                        docked: 'top',
+                        title: 'PhoneGap'
+                    },
+                    {
+                        html: 'Content'
+                    }
+                ]);
+            }
+        });
+    </script>
   </head>
 
   <body></body>
