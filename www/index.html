@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- BUG WITH BETA 1: you must remove this line to run in a normal browser. -->
     <script type="text/javascript" charset="utf-8" src="phonegap-1.2.0.js"></script>
 
     <!-- Sencha Touch -->
-    <script type="text/javascript" charset="utf-8" src="touch2/builds/sencha-touch-all-debug.js"></script>
-    <link rel="stylesheet" href="touch2/resources/css/sencha-touch.css">
+    <script type="text/javascript" charset="utf-8" src="http://dev.sencha.com/deploy/sencha-touch-2-b2/builds/sencha-touch-all.js"></script>
+    <link rel="stylesheet" href="http://dev.sencha.com/deploy/sencha-touch-2-b2/resources/css/sencha-touch.css">
 
     <!-- Simple Application -->
     <script type="text/javascript">
@@ -14,7 +13,8 @@
             name: 'MyApp',
             launch: function() {
                 // This will appear in the Xcode console. Used for debugging.
-                console.log('launch');
+                console.log('application launched');
+                console.log('you are running phonegap with sencha touch on an ' + navigator.platform);
 
                 Ext.Viewport.add([
                     {
